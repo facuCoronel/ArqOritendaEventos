@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces.Services;
+﻿using Domain.Entities;
+using Domain.Interfaces.Services;
 using Domain.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,17 +10,20 @@ namespace BusEvents.Controllers
     [ApiController]
     public class EventController : ControllerBase
     {
-        IRedirectTo _eventsCore;
+        IEventCoreService _eventsCore;
 
-        public EventController(IRedirectTo eventsCore)
+        public EventController(IEventCoreService eventsCore)
         {
             _eventsCore = eventsCore;
         }
 
-        [HttpGet]
-        public IActionResult GetEvents()
+        [HttpPost]
+        public IActionResult SendEvents(Message message)
         {
-            return Ok(_eventsCore.redirecToSubscribe());
+            var validatorKey = _eventsCore.ValidatorKey(message.Key);
+            if(validatorKey.Count > 0)
+                return Ok(_eventsCore.SendEvent(message));
+            else return BadRequest();
         }
     }
 }

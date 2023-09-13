@@ -17,6 +17,7 @@ namespace Infraestructure.SqlServer.EventsDbContext
 
 
         DbSet<EventCore> EventsCore { get; set; }
+        DbSet<Event_ApiUrl> Event_ApiUrl { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             
@@ -25,6 +26,7 @@ namespace Infraestructure.SqlServer.EventsDbContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EventCoreConfigration());
+            modelBuilder.ApplyConfiguration(new EventCore_ApiUrlConfiguration());
         }
     }
 }

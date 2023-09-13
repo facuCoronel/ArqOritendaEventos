@@ -9,5 +9,7 @@ namespace Domain.Core.Services
 {
     public abstract class DomainService : DisposableObject, IDomain
     {
+
+        protected DomainService() { }
     }
 }

@@ -10,20 +10,21 @@ using System.Threading.Tasks;
 
 namespace ExternalIntegration.Services
 {
-    public class ThirdPartyService : IThirdParty
+    public class ThirdPartyService : IThirdPartyService
     {
-        private string BusEvent = "";
+        private string apiUrl = "https://localhost:7263/api/Event";
 
 
         public async Task<bool> SendEvent(Message message)
         {
+            
             try
             {
                 HttpClient client = new HttpClient();
                 var payloadMessage = JsonSerializer.Serialize(message);
                 var content = new StringContent(payloadMessage, Encoding.UTF8, "application/json");
 
-                var response = await client.PostAsync(BusEvent, content);
+                var response = await client.PostAsync(apiUrl, content);
                 return response.IsSuccessStatusCode;
             }
             catch (Exception ex)

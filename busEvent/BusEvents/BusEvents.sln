@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure.SqlServer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Core", "..\Domain.Core\Domain.Core.csproj", "{5E438684-4438-44E9-BDAD-DC259BE2BDDF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-ExternalIntegration", "4-ExternalIntegration", "{6EDD7DE1-8992-4769-BFB0-0D3459A080EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalIntegration", "..\ExternalIntegration\ExternalIntegration.csproj", "{C161742A-03FC-43C1-AFC1-36AEB042E227}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{5E438684-4438-44E9-BDAD-DC259BE2BDDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E438684-4438-44E9-BDAD-DC259BE2BDDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E438684-4438-44E9-BDAD-DC259BE2BDDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C161742A-03FC-43C1-AFC1-36AEB042E227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C161742A-03FC-43C1-AFC1-36AEB042E227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C161742A-03FC-43C1-AFC1-36AEB042E227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C161742A-03FC-43C1-AFC1-36AEB042E227}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{21F048E0-51E8-415B-8C2D-D68AADD5FC80} = {E92AA56E-840E-4940-BEC7-428B967324D1}
 		{2722E22C-7C80-4B1F-AFEC-C54E1AEF61EB} = {610B71C7-5F30-45E1-AFFE-E33F1E2060B6}
 		{5E438684-4438-44E9-BDAD-DC259BE2BDDF} = {E92AA56E-840E-4940-BEC7-428B967324D1}
+		{C161742A-03FC-43C1-AFC1-36AEB042E227} = {6EDD7DE1-8992-4769-BFB0-0D3459A080EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5B2897B-D587-47A9-932C-15D2C47B5967}

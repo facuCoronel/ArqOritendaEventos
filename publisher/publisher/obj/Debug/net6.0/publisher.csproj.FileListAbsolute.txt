@@ -91,3 +91,5 @@ C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\publisher\publi
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\publisher\publisher\bin\Debug\net6.0\ExternalIntegration.dll
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\publisher\publisher\bin\Debug\net6.0\Domain.pdb
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\publisher\publisher\bin\Debug\net6.0\ExternalIntegration.pdb
+C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\publisher\publisher\bin\Debug\net6.0\Domain.Core.dll
+C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\publisher\publisher\bin\Debug\net6.0\Domain.Core.pdb

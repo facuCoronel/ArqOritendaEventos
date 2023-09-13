@@ -40,6 +40,37 @@ namespace Infraestructure.SqlServer.Migrations
 
                     b.ToTable("EventsCore", (string)null);
                 });
+
+            modelBuilder.Entity("Domain.Entities.Event_ApiUrl", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ApiUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("EventCoreId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventCoreId");
+
+                    b.ToTable("EventsCore_ApiUrl", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.Event_ApiUrl", b =>
+                {
+                    b.HasOne("Domain.Entities.EventCore", "EventCore")
+                        .WithMany()
+                        .HasForeignKey("EventCoreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("EventCore");
+                });
 #pragma warning restore 612, 618
         }
     }

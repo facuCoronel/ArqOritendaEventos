@@ -91,3 +91,5 @@ C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\BusEve
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\BusEvents\obj\Debug\net6.0\BusEvents.pdb
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\BusEvents\obj\Debug\net6.0\BusEvents.genruntimeconfig.cache
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\BusEvents\obj\Debug\net6.0\ref\BusEvents.dll
+C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\BusEvents\bin\Debug\net6.0\ExternalIntegration.dll
+C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\BusEvents\bin\Debug\net6.0\ExternalIntegration.pdb

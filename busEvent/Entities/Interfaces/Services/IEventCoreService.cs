@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces.Services
 {
-    public interface IRedirectTo : IDomain
+    public interface IEventCoreService : IDomain
     {
-        List<EventCore> redirecToSubscribe();
+        List<EventCore> ValidatorKey(Guid key);
+        bool SendEvent(Message message);
     }
 }

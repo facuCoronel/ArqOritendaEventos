@@ -1246,11 +1246,28 @@
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain.Core": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.Core.dll": {}
         }
       },
       "ExternalIntegration/1.0.0": {
@@ -1270,6 +1287,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "ExternalIntegration": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10"
         },
         "compile": {
@@ -3753,6 +3771,11 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../Domain.Core/Domain.Core.csproj",
+      "msbuildProject": "../Domain.Core/Domain.Core.csproj"
     },
     "ExternalIntegration/1.0.0": {
       "type": "project",

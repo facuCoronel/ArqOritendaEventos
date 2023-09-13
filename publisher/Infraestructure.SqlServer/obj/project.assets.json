@@ -1155,6 +1155,46 @@
             "rid": "win"
           }
         }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain.Core": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.Core.dll": {}
+        }
+      },
+      "ExternalIntegration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ExternalIntegration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExternalIntegration.dll": {}
+        }
       }
     }
   },
@@ -3500,10 +3540,26 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../Domain.Core/Domain.Core.csproj",
+      "msbuildProject": "../Domain.Core/Domain.Core.csproj"
+    },
+    "ExternalIntegration/1.0.0": {
+      "type": "project",
+      "path": "../ExternalIntegration/ExternalIntegration.csproj",
+      "msbuildProject": "../ExternalIntegration/ExternalIntegration.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ExternalIntegration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.10"
     ]
@@ -3542,7 +3598,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\publisher\\ExternalIntegration\\ExternalIntegration.csproj": {
+              "projectPath": "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\publisher\\ExternalIntegration\\ExternalIntegration.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

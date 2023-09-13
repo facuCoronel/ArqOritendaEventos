@@ -1,6 +1,8 @@
 using Domain.Interfaces.Repositories;
 using Domain.Interfaces.Services;
 using Domain.Services;
+using ExternalIntegration.Interfaces;
+using ExternalIntegration.Services;
 using Infraestructure.SqlServer.EventsDbContext;
 using Infraestructure.SqlServer.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -15,8 +17,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //EventosCore
-builder.Services.AddScoped<IRedirectTo, RedirectToService>();
-builder.Services.AddScoped<IRedirectToepository, RedirectToRepository>();
+builder.Services.AddScoped<IEventCoreService, EventCoreService>();
+builder.Services.AddScoped<IEventCoreRepository, EventCoreRepository>();
+builder.Services.AddScoped<IThirdPartyService, ThirdPartyService>();
+
+//ExternalServices
+builder.Services.AddScoped<IThirdPartyService, ThirdPartyService>();
 
 
 

@@ -14,5 +14,9 @@
             ProjectId = projectId;
             Key = key;
         }
+        public Message()
+        {
+            
+        }
     }
 }

@@ -17,3 +17,5 @@ C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\Infrae
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\Infraestructure.SqlServer\obj\Debug\net6.0\Infraestructure.SqlServer.pdb
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\Infraestructure.SqlServer\obj\Debug\net6.0\Infraestructure.SqlServer.genruntimeconfig.cache
 C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\Infraestructure.SqlServer\obj\Debug\net6.0\ref\Infraestructure.SqlServer.dll
+C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\Infraestructure.SqlServer\bin\Debug\net6.0\ExternalIntegration.dll
+C:\Users\facundo.coronel\Desktop\prgramacion orientado a eventos\busEvent\Infraestructure.SqlServer\bin\Debug\net6.0\ExternalIntegration.pdb

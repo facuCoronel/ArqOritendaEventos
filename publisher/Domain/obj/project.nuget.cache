@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9jWHjahi2+vpJwnpdsK91nlhRuIGHW0x9uOxJlIyDRSzKG/z26nWtRM+MgfSwN14F14Ilu7lzcPM1e3KNgZvbg==",
+  "dgSpecHash": "6zAUI6H1WOQJRaNuPAjNvRT49Ofb9JhD03cRK7jmEJXIEMPuGN/U86AW77A7VdALPGprScPALj0V6oC35G66vA==",
   "success": true,
   "projectFilePath": "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\publisher\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "GQTeiEIIEvY7j9RhgV+HRCpcbAKBYRk0XVlJA2/vgOdtUVYfKc7iwRW1CZAsA1C//2msRjZvv7x6N7lf7V4Ciw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\suscriber\\suscriber\\suscriber.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\facundo.coronel\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

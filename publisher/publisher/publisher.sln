@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-ExternalIntegraton", "4-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalIntegration", "..\ExternalIntegration\ExternalIntegration.csproj", "{BD2879D3-908A-48C5-B481-F8C029BFE4A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Core", "..\Domain.Core\Domain.Core.csproj", "{F9954BC2-AAE4-47BD-86AB-D8F0AD7A3236}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{BD2879D3-908A-48C5-B481-F8C029BFE4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2879D3-908A-48C5-B481-F8C029BFE4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD2879D3-908A-48C5-B481-F8C029BFE4A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9954BC2-AAE4-47BD-86AB-D8F0AD7A3236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9954BC2-AAE4-47BD-86AB-D8F0AD7A3236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9954BC2-AAE4-47BD-86AB-D8F0AD7A3236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9954BC2-AAE4-47BD-86AB-D8F0AD7A3236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{BCC5A6A1-5227-4D51-A7D2-F5B19B62B165} = {1B7BDD4F-FCF4-4318-813E-4CDF34C50238}
 		{37D845BA-DBAA-4FEF-805B-2E07592B66B2} = {C31AB3E6-86C7-4046-ACD8-41BFBD6212E9}
 		{BD2879D3-908A-48C5-B481-F8C029BFE4A0} = {28A55FE8-DB97-4760-870D-65E56C7A9F00}
+		{F9954BC2-AAE4-47BD-86AB-D8F0AD7A3236} = {1B7BDD4F-FCF4-4318-813E-4CDF34C50238}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A496A98E-E27C-455F-9103-3E7A42E22E46}

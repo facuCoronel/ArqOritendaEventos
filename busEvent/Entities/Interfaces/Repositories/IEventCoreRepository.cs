@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces.Repositories
 {
-    public interface IRedirectToepository : IBaseRepository<EventCore>
+    public interface IEventCoreRepository : IBaseRepository<EventCore>
     {
+        bool SendMessage(Message message);
     }
 }

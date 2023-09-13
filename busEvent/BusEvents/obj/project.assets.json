@@ -1267,12 +1267,26 @@
           "bin/placeholder/Domain.Core.dll": {}
         }
       },
+      "ExternalIntegration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ExternalIntegration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExternalIntegration.dll": {}
+        }
+      },
       "Infraestructure.SqlServer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Domain": "1.0.0",
           "Domain.Core": "1.0.0",
+          "ExternalIntegration": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10"
         },
         "compile": {
@@ -3762,6 +3776,11 @@
       "path": "../Domain.Core/Domain.Core.csproj",
       "msbuildProject": "../Domain.Core/Domain.Core.csproj"
     },
+    "ExternalIntegration/1.0.0": {
+      "type": "project",
+      "path": "../ExternalIntegration/ExternalIntegration.csproj",
+      "msbuildProject": "../ExternalIntegration/ExternalIntegration.csproj"
+    },
     "Infraestructure.SqlServer/1.0.0": {
       "type": "project",
       "path": "../Infraestructure.SqlServer/Infraestructure.SqlServer.csproj",
@@ -3771,6 +3790,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Domain >= 1.0.0",
+      "Domain.Core >= 1.0.0",
+      "ExternalIntegration >= 1.0.0",
       "Infraestructure.SqlServer >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.10",
@@ -3813,8 +3834,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\Domain.Core\\Domain.Core.csproj": {
+              "projectPath": "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\Domain.Core\\Domain.Core.csproj"
+            },
             "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\Entities\\Domain.csproj": {
               "projectPath": "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\Entities\\Domain.csproj"
+            },
+            "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\ExternalIntegration\\ExternalIntegration.csproj": {
+              "projectPath": "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\ExternalIntegration\\ExternalIntegration.csproj"
             },
             "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\Infraestructure.SqlServer\\Infraestructure.SqlServer.csproj": {
               "projectPath": "C:\\Users\\facundo.coronel\\Desktop\\prgramacion orientado a eventos\\busEvent\\Infraestructure.SqlServer\\Infraestructure.SqlServer.csproj"

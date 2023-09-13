@@ -2,32 +2,29 @@
 using Domain.Entities;
 using Domain.Interfaces.Repositories;
 using Domain.Interfaces.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Services
 {
-    public class RedirectToService : DomainService, IRedirectTo
+    public class EventCoreService : DomainService, IEventCoreService
     {
-        private readonly IRedirectToepository _EventsCoreRepository;
-        public int MyProperty { get; set; }
+        private readonly IEventCoreRepository _EventsCoreRepository;
 
 
-        public RedirectToService(IRedirectToepository EventsCoreRepository)
+        public EventCoreService(IEventCoreRepository EventsCoreRepository)
         {
             _EventsCoreRepository = EventsCoreRepository;
         }
-        public List<EventCore> redirecToSubscribe()
+        public List<EventCore> ValidatorKey(Guid key)
         {
-            var result = _EventsCoreRepository.GetAll().ToList();
-
+            var result = _EventsCoreRepository.DoFilter<EventCore>( bdKey => bdKey.Key == key).ToList();
             return result;
         }
 
-
+        public bool SendEvent(Message message)
+        {
+            _EventsCoreRepository.SendMessage(message);
+            return true;
+        }
 
 
     }

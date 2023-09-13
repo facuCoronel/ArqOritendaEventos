@@ -1,5 +1,5 @@
 ﻿using Domain.Entities;
-using Domain.Interfaces;
+using Domain.Interfaces.Services;
 using ExternalIntegration.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,9 +10,9 @@ namespace publisher.Controllers
     [ApiController]
     public class PublisherEventsController : ControllerBase
     {
-        private readonly IThirdParty _thirdParty;
+        private readonly IThirdPartyService _thirdParty;
         private readonly IMessageBroker _messageBroker;
-        public PublisherEventsController(IThirdParty thirdParty, IMessageBroker messageBroker)
+        public PublisherEventsController(IThirdPartyService thirdParty, IMessageBroker messageBroker)
         {
             this._thirdParty = thirdParty;
             this._messageBroker = messageBroker;

@@ -1,5 +1,8 @@
-﻿using Domain.Entities;
-using Domain.Interfaces;
+﻿using Domain.Core.Services;
+using Domain.Entities;
+using Domain.Interfaces.Repositories;
+using Domain.Interfaces.Services;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,30 +14,29 @@ using System.Threading.Tasks;
 
 namespace Domain.Services
 {
-    public class MessageBrokerService : IMessageBroker
+    public class MessageBrokerService : DomainService, IMessageBroker
     {
-        public string? ProjectId { get; set; }
-        public string? TopicId { get; set; }
-        public Guid Key { get; set; }
-        public MessageBrokerService(string? ProjectId, string? TopicId, Guid key)
-        {
-            this.ProjectId = ProjectId;
-            this.TopicId = TopicId;
-            Key = key;
+        IMessageBrokerRepository _messageBrokerRepository;
 
+        public MessageBrokerService(IMessageBrokerRepository messageBrokerRepository, IConfiguration configuration) : base(configuration)
+        {
+            _messageBrokerRepository = messageBrokerRepository;
         }
 
 
-        public async Task<Message> BuildMessage(object entity)
+        public async Task<bool> BuildMessage(object entity)
         {
-            if (this.ProjectId == null || this.TopicId == null)
+            if ( _projectId == null || _topicId == null)
                 throw new Exception("the parameters are null");
 
-
             var base64 = Encoding.UTF8.GetBytes(JsonSerializer.Serialize(entity));
-            var message = new Message(base64, this.TopicId, this.ProjectId, this.Key);
+            var message = new Message(base64, _topicId, _projectId, _key);
 
-            return message;
+            var messages = new Queue<Message>();
+            messages.Enqueue(message);
+            var response = _messageBrokerRepository.SendMessage(messages.Dequeue());
+
+            return response;
 
         }
 

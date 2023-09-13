@@ -3,8 +3,11 @@ using ExternalIntegration.Services;
 using Infraestructure.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Domain;
-using Domain.Interfaces;
 using Domain.Services;
+using Domain.Interfaces.Services;
+using Domain.Interfaces.Repositories;
+using Infraestructure.SqlServer.Repositories;
+using Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,13 +25,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//builder.Services.AddDbContext<ContextDb>(options => options.UseSqlServer("name=DefaultConnection"));
 
-builder.Services.AddScoped<IThirdParty,ThirdPartyService>();
-//builder.Services.AddScoped<IMessageBroker, MessageBrokerService>();
+builder.Services.AddScoped<IThirdPartyService,ThirdPartyService>();
+builder.Services.AddScoped<IMessageBrokerRepository, MessageBrokerRepository>();
+builder.Services.Configure<Message>(builder => new Message(null, topicId, projectId, Guid.Parse(key)));
 
 //MessageBroker
-builder.Services.AddTransient<IMessageBroker, MessageBrokerService>(build => new MessageBrokerService(projectId, topicId, Guid.Parse(key)));
+builder.Services.AddTransient<IMessageBroker, MessageBrokerService>();
 
 var app = builder.Build();
 

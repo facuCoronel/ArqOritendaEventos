@@ -37,6 +37,8 @@ namespace Infraestructure.SqlServer.Migrations
         {
             migrationBuilder.DropTable(
                 name: "EventsCore");
+
+
         }
     }
 }

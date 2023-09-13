@@ -750,8 +750,20 @@
         }
       },
       "Domain/1.0.0": {
+        "dependencies": {
+          "Domain.Core": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
         "runtime": {
           "Domain.dll": {}
+        }
+      },
+      "Domain.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
+        "runtime": {
+          "Domain.Core.dll": {}
         }
       },
       "ExternalIntegration/1.0.0": {
@@ -764,6 +776,7 @@
       },
       "Infraestructure.SqlServer/1.0.0": {
         "dependencies": {
+          "ExternalIntegration": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10"
         },
         "runtime": {
@@ -1297,6 +1310,11 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
